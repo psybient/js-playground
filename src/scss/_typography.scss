@@ -1,0 +1,17 @@
+@font-face {
+    font-family: Shabnam;
+    src: url('../../node_modules/shabnam-font/dist/Shabnam.ttf') format('truetype');
+    font-weight: normal;
+  }
+
+
+@import url('https://fonts.googleapis.com/css?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+  
+     .shabnam{
+       font-family: 'Shabnam';
+     }
+
+     .myfont{
+      font-family: 'Patua One', sans-serif !important;
+     }
