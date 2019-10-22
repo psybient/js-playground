@@ -47,7 +47,18 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
 
   render(chars, arr);
+
+  //-------------------------
   // _.formInit();
+  document.getElementById("form").addEventListener("click",()=>{
+    console.log(event.target)
+  })
+
+  document.getElementById("form").addEventListener("submit",()=>{
+    console.log(event.target)
+  })
+
+
   let myUser1 = {
     ...proxies.user
   };
@@ -127,6 +138,11 @@ const render = function (...args) {
 
 
   root.innerHTML = html + `</div>
-  first : <input type="text" id="input1" value="" />
-  second : <input type="text" id="input2" value="" />`;
+   <form action="#" id="form">
+  first : <input type="text" id="input1" value="" required="name" />
+  second : <input type="email" id="input2" value="" />
+  <input type="submit">submit</input>
+  </form>
+  `;
+  
 }

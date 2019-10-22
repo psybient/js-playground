@@ -24,7 +24,7 @@ export const InitProxy = (function () {
       if (prop == 'name' && target.id) {
         // update object property
         target[prop] = newValue;
-
+        console.log(`Setting ${prop} from ${target[prop]} to ${newValue}`);
         // update input field value
         const input = document.getElementById(target.id);
         if (input)
@@ -44,6 +44,7 @@ function makeProfiler(target) {
   
         get: function(target, name) {
           if (name in target) {
+              
             count[name] = (count[name] || 0) + 1;
             return target[name];
           }
