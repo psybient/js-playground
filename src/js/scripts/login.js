@@ -28,7 +28,7 @@ export default function () {
 
   document.addEventListener('DOMContentLoaded', function () {
     document
-      .querySelectorAll('.form-1char')
+      .querySelectorAll('.nc-char')
       .forEach(el => id_inputs.push(el.getElementsByTagName('input')[0]));
     form = document.getElementById('information_form');
     mail_input = document.getElementById('mail_input');
@@ -81,21 +81,23 @@ export default function () {
     // bind submit button
     document
       .getElementById('submit_login_information')
-      .addEventListener('click', () => validationOnSubmit());
+      .addEventListener('click', () => {
+        validationOnSubmit();
 
-    form.addEventListener('submit', () => {
-      // remove html and reduce injection vulnerability
-      document
-        .querySelectorAll('.js-input-selector')
-        .forEach(el => (el.value = escapeForHTML(el.value)));
-      document.getElementById(
-        'nationalCode'
-      ).value = state.nationalCode.slice().join('');
-      document.getElementById(
-        'nationalCode'
-      ).text = state.nationalCode.slice().join('');
-      form.submit();
-    });
+        //form.addEventListener('submit', () => {
+        // remove html and reduce injection vulnerability
+        document
+          .querySelectorAll('.js-input-selector')
+          .forEach(el => (el.value ? el.value = escapeForHTML(el.value) : false));
+        document.getElementById(
+          'nationalCode'
+        ).value = state.nationalCode.slice().join('');
+        document.getElementById(
+          'nationalCode'
+        ).text = state.nationalCode.slice().join('');
+        form.submit();
+      });
+
   });
 
   function validateNcInput() {
