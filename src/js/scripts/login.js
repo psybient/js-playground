@@ -3,15 +3,16 @@ import {
 } from './common/utils';
 import {
   ProxyHelper as proxy
-} from './learning/proxies'
+} from './learning/proxies';
 export default function () {
-  const state = {
+  const initialState = {
     form: '',
-    nationalCode: new Array(10),
-    email: '',
     doInfoChange: false,
-    userName: '',
-    password: '',
+    nationalCode: new Array(10),
+    // email: '',
+    // userName: '',
+    // password: '',
+    ...{...proxy.loginUser}
   };
 
   const _dom = {
@@ -21,6 +22,7 @@ export default function () {
     textInputs: '.js-input-selector'
   };
 
+  let state={};
   let id_inputs = [];
   let form = null;
   let mail_input = null;
@@ -29,9 +31,14 @@ export default function () {
     userName = null;
 
   document.addEventListener('DOMContentLoaded', function () {
-    proxy.inputNamedChange({
-      ...proxy.loginUser
-    })
+    //proxy.inputNamedChange(state);
+    const logger = () => console.log('I was called');
+    //const obj = { a: 'a' };
+    state = proxy.onChange(initialState, logger);
+    // console.log(state.a); // logger called here in get trap
+    // proxy.b = 'b'; // logger called here as well in set trap
+    // delete proxy.a; // logger called here in deleteProperty trap
+    state.email=5;
 
     document
       .querySelectorAll('.nc-char')
@@ -90,7 +97,7 @@ export default function () {
       .addEventListener('click', () => {
         var isFormValidate = true;
         validationOnSubmit();
-
+        console.log(state)
         //form.addEventListener('submit', () => {
         // remove html and reduce injection vulnerability
         document
@@ -99,8 +106,8 @@ export default function () {
             if (!el.checkValidity()) {
               console.log("not valid");
               isFormValidate = false;
-            };
-            el.value ? el.value = escapeForHTML(el.value) : false
+            }
+            el.value ? el.value = escapeForHTML(el.value) : false;
           });
         document.getElementById(
           'nationalCode'
@@ -232,5 +239,4 @@ export default function () {
     s = s % 11;
     return (s < 2 && c == s) || (s >= 2 && c == 11 - s);
   }
-
 }
