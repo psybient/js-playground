@@ -1,0 +1,75 @@
+@import "../../common/common.scss";
+
+.mr-width-medium-large {
+    width: 320px;
+  }
+
+.mr-padding-small-medium {
+padding: 23px ;
+}
+
+.form-1char {
+    width:6.52%;
+}
+
+.mr-text-80percent {
+    font-size: 80% !important; 
+  }
+
+.mr-ltr {
+direction: ltr;
+}
+
+.mr-rtl {
+direction: rtl;
+}
+
+.NCode-lastDigit-input {
+    border-radius: 0 5px 5px 0;
+}
+
+.NCode-firstDigit-input {
+    border-radius: 5px 0 0 5px;
+}
+
+.overlap-icon {
+    margin-top:6px;
+}
+
+.hover-underline{
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    &:after {    
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #39f;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      &:hover:after { 
+        width: 100%; 
+        left: 0; 
+      }
+}
+
+input:invalid {
+    border-color: orange;
+    &.js-empty-field{border-color: gray;}
+    &.js-invalid-field{border-color: red;}
+    &::before{
+        position: relative;
+        content:'*';
+        color:red
+    }
+  }
+  
+  input:valid {
+    //border: 2px solid black;
+    //border-color: gray;
+  }
