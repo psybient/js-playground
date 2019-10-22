@@ -1,22 +1,24 @@
 import {
   escapeForHTML
 } from './common/utils';
-
+import {
+  ProxyHelper as proxy
+} from './learning/proxies'
 export default function () {
   const state = {
     form: '',
     nationalCode: new Array(10),
     email: '',
     doInfoChange: false,
-    newUserName: '',
-    newPassword: '',
-    repeatedpasswor: '',
+    userName: '',
+    password: '',
   };
 
   const _dom = {
     empty: 'js-empty-field',
     invalid: 'js-invalid-field',
     editInfoInputs: 'edit-login-info-input',
+    textInputs: '.js-input-selector'
   };
 
   let id_inputs = [];
@@ -27,6 +29,10 @@ export default function () {
     userName = null;
 
   document.addEventListener('DOMContentLoaded', function () {
+    proxy.inputNamedChange({
+      ...proxy.loginUser
+    })
+
     document
       .querySelectorAll('.nc-char')
       .forEach(el => id_inputs.push(el.getElementsByTagName('input')[0]));
@@ -82,20 +88,28 @@ export default function () {
     document
       .getElementById('submit_login_information')
       .addEventListener('click', () => {
+        var isFormValidate = true;
         validationOnSubmit();
 
         //form.addEventListener('submit', () => {
         // remove html and reduce injection vulnerability
         document
           .querySelectorAll('.js-input-selector')
-          .forEach(el => (el.value ? el.value = escapeForHTML(el.value) : false));
+          .forEach(el => {
+            if (!el.checkValidity()) {
+              console.log("not valid");
+              isFormValidate = false;
+            };
+            el.value ? el.value = escapeForHTML(el.value) : false
+          });
         document.getElementById(
           'nationalCode'
         ).value = state.nationalCode.slice().join('');
         document.getElementById(
           'nationalCode'
         ).text = state.nationalCode.slice().join('');
-        form.submit();
+        if (isFormValidate)
+          form.submit();
       });
 
   });
@@ -117,11 +131,12 @@ export default function () {
         input.setCustomValidity('');
       }
 
-      if (isFull) {
-        //console.log("isFull")
-        validateFakeNationalCode();
-      }
+
     });
+    if (isFull) {
+      //console.log("isFull")
+      validateFakeNationalCode();
+    }
   }
 
   //bind submit button
