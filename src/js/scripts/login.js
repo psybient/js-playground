@@ -220,8 +220,3 @@ function NCodeValidityChecker(code) {
   return (s < 2 && c == s) || (s >= 2 && c == 11 - s);
 }
 
-function locationHashChanged() {
-  if (location.hash === '#gallery') {
-    console.log("You're visiting a cool feature!");
-  }
-}
