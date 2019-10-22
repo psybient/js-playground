@@ -23,8 +23,9 @@ import Icons from 'uikit/dist/js/uikit-icons';
 UIkit.use(Icons);
 
 import { InitProxy as proxies } from './scripts/learning/proxies';
+import loginInit from './scripts/login'
 //var bootstrap = require('bootstrap');
-
+loginInit();
 //import './scripts/main';
 // let root = document.getElementById('root');
 // let outputArr = [];

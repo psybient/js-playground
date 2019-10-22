@@ -58,21 +58,14 @@ direction: rtl;
       }
 }
 
-input {
-  border:1px solid black !important;
-}
+
 input:invalid {
-    border-color: orange;
-    &.js-empty-field{border-color: gray;}
-    &.js-invalid-field{border-color: red;}
-    &::before{
-        position: relative;
-        content:'*';
-        color:red
-    }
+    border:1px solid  rgb(255, 38, 0);
+   
   }
   
+  //@mixin hook-input() { border:1px solid gray }
   input:valid {
-    //border: 2px solid black;
+     border:1px solid lightgray;
     //border-color: gray;
   }
