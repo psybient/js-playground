@@ -1,4 +1,4 @@
-@import "../../common/common.scss";
+//@import "../../common/common.scss";
 
 .mr-width-medium-large {
     width: 320px;
@@ -9,7 +9,7 @@ padding: 23px ;
 }
 
 .form-1char {
-    width:6.52%;
+    width:5.52%;
 }
 
 .mr-text-80percent {
@@ -24,11 +24,11 @@ direction: ltr;
 direction: rtl;
 }
 
-.NCode-lastDigit-input {
+.nc-lastdigit-input {
     border-radius: 0 5px 5px 0;
 }
 
-.NCode-firstDigit-input {
+.nc-firstdigit-input {
     border-radius: 5px 0 0 5px;
 }
 
@@ -58,6 +58,9 @@ direction: rtl;
       }
 }
 
+input {
+  border:1px solid black !important;
+}
 input:invalid {
     border-color: orange;
     &.js-empty-field{border-color: gray;}

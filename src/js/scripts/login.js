@@ -1,14 +1,11 @@
-import { UIController } from './view/UIController';
-const uic = new UIController();
+//import { UIController } from './view/UIController';
+//const uic = new UIController();
 
-window.onhashchange = locationHashChanged;
+//window.onhashchange = locationHashChanged;
 
-uic.drowContext();
-import * as UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
-import { escapeForHTML } from '../../common/uiHelpers';
-UIkit.use(Icons);
-module.hot.accept();
+//uic.drowContext();
+
+import { escapeForHTML } from './common/utils';
 
 const state = {
   form: '',

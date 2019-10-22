@@ -29,7 +29,8 @@
     "isotope-layout": "^3.0.6",
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
-    "shabnam-font": "^4.0.0"
+    "shabnam-font": "^4.0.0",
+    "uikit": "^3.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

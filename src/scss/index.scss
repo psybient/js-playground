@@ -4,11 +4,17 @@
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 
 @import './variables'; 
-@import '../../node_modules/owl.carousel/src/scss/owl.carousel';
+//@import '../../node_modules/owl.carousel/src/scss/owl.carousel';
+@import "uikit/src/scss/variables.scss";
+@import "uikit/src/scss/mixins.scss";
 
+// 3. Your custom mixin overwrites.
+
+// 4. Import UIkit
+@import "uikit/src/scss/uikit.scss";
 @import './animate';
-@import './theme.scss';
-@import './login.scss';
+@import './theme';
+@import './login';
 
 //@import './app'; // Zurb Foundation Entry
 
