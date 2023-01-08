@@ -4858,29 +4858,7 @@ jpegtran-bin@^4.0.0:
     bin-wrapper "^4.0.0"
     logalot "^2.0.0"
 
-jquery-migrate@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/jquery-migrate/-/jquery-migrate-3.1.0.tgz#8158de74cca39fb7fc2635db570151ae7ce3ddea"
-
-jquery-timepicker@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/jquery-timepicker/-/jquery-timepicker-1.3.3.tgz#034160c90a52619df68963eda7625d1fca89cb7a"
-  dependencies:
-    jquery ">= 1.4.3"
-
-jquery.nicescroll@^3.7.6:
-  version "3.7.6"
-  resolved "https://registry.yarnpkg.com/jquery.nicescroll/-/jquery.nicescroll-3.7.6.tgz#afeff3e80658dabe4f78d2d2e84250060fea0852"
-  dependencies:
-    jquery ">=1.8.3"
-
-jquery.stellar@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/jquery.stellar/-/jquery.stellar-0.6.2.tgz#034003fa3475dde69bba05a3faf6168775ad69dd"
-  dependencies:
-    jquery ">=1.4.3"
-
-"jquery@>= 1.4.3", jquery@>=1.4.3, jquery@>=1.8.3, jquery@^3.4.1:
+jquery@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
 
@@ -5216,17 +5194,9 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.5, lodash@~4.17.10:
-  version "4.17.10"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
-
-lodash@^4.17.11:
-  version "4.17.11"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
-
-lodash@^4.17.15:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.21, lodash@^4.17.5, lodash@~4.17.10:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
 
 log-symbols@^1.0.2:
   version "1.0.2"
@@ -5315,10 +5285,6 @@ lru-cache@^5.1.1:
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-5.1.1.tgz#1da27e6710271947695daf6848e847f01d84b920"
   dependencies:
     yallist "^3.0.2"
-
-magnific-popup@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/magnific-popup/-/magnific-popup-1.1.0.tgz#3e7362c5bd18f6785fe99e59d013e20af33d3049"
 
 make-dir@^1.0.0, make-dir@^1.2.0:
   version "1.3.0"
@@ -6154,12 +6120,6 @@ outlayer@^2.1.0:
     fizzy-ui-utils "^2.0.0"
     get-size "^2.0.2"
 
-owl.carousel@^2.3.4:
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/owl.carousel/-/owl.carousel-2.3.4.tgz#6c53dc8d24304b790e4f27a1dc4a655e973ccdc9"
-  dependencies:
-    jquery ">=1.8.3"
-
 p-cancelable@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/p-cancelable/-/p-cancelable-0.3.0.tgz#b9e123800bcebb7ac13a479be195b507b98d30fa"
@@ -6485,10 +6445,6 @@ pngquant-bin@^5.0.0:
     bin-wrapper "^4.0.1"
     execa "^0.10.0"
     logalot "^2.0.0"
-
-popper.js@^1.15.0:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.15.0.tgz#5560b99bbad7647e9faa475c6b8056621f5a4ff2"
 
 portfinder@^1.0.20:
   version "1.0.20"
@@ -8340,6 +8296,10 @@ uglify-js@3.4.x:
   dependencies:
     commander "~2.17.1"
     source-map "~0.6.1"
+
+uikit@^3.2.1:
+  version "3.15.20"
+  resolved "https://registry.yarnpkg.com/uikit/-/uikit-3.15.20.tgz#95bf7c5536c3d6eaa907d3ad424477ccad69cfaf"
 
 unbzip2-stream@^1.0.9:
   version "1.2.5"
